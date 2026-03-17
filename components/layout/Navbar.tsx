@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const NAV_LINKS = [
   {
@@ -100,12 +101,11 @@ export default function Navbar() {
         setHoveredMenu(null);
       }}
     >
-      <div className={`flex items-center py-4 lg:py-6 gap-2 cursor-pointer transition-colors ${
+      <div className={`flex items-center py-2 lg:py-2 gap-2 cursor-pointer transition-colors ${
         isNavWhite ? "text-[#0b1c2d]" : "text-white"
       }`}>
         <span className="text-3xl font-extrabold tracking-tight flex items-center gap-1.5">
-          Vidhyut
-          <span className="text-[#FFB800] mt-0.5">⚡</span>
+          <Image src="/logo-nobg.png" alt="Vidhyut Logo" width={70} height={70} />
         </span>
       </div>
 
